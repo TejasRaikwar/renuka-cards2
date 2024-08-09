@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+  <body>
+    <div class="main-body">
+      <div class="banner-main">
+        <div class="banner-inner">
+          <div></div>
+          <div><p>Document Management System</p></div>
+        </div>
+      </div>
+      <center class="slider-main-container">
+        <div class="divs-slider">
+          <div class="glass-card">
+            <i class="fa-solid fa-user-secret"></i>
+            <p>some text</p>
+          </div>
+          <div class="glass-card">
+            <i class="fa-solid fa-user-secret"></i>
+            <p>some text</p>
+          </div>
+          <div class="glass-card">
+            <i class="fa-solid fa-user-secret"></i>
+            <p>some text</p>
+          </div>
+          <div class="glass-card">
+            <i class="fa-solid fa-user-secret"></i>
+            <p>some text</p>
+          </div>
+          <div class="glass-card">
+            <i class="fa-solid fa-user-secret"></i>
+            <p>some text</p>
+          </div>
+          <div class="glass-card">
+            <i class="fa-solid fa-user-secret"></i>
+            <p>some text</p>
+          </div>
+        </div>
+      </center>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      document.querySelectorAll(".glass-card").forEach((card) => {
+        card.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+      });
+    
+      var numOfItem;
+    
+      function updateWindowWidth() {
+        const width = window.innerWidth;
+        if (width <= 450) {
+          numOfItem = 2;
+        } else if (width < 545) {
+          numOfItem = 3;
+        } else if (width < 800) {
+          numOfItem = 4;
+        } else {
+          numOfItem = 5;
+        }
+      }
+    
+      function initializeSlider() {
+        $(".divs-slider").slick({
+          infinite: true,
+          slidesToShow: numOfItem,
+          slidesToScroll: 1,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          prevArrow:
+            '<button type="button" class="slick-prev">Previous</button>',
+          nextArrow: '<button type="button" class="slick-next">Next</button>',
+        });
+      }
+    
+      window.addEventListener("resize", function () {
+        updateWindowWidth();
+        $(".divs-slider").slick("unslick");
+        initializeSlider();
+      });
+    
+      document.addEventListener("DOMContentLoaded", (event) => {
+        updateWindowWidth();
+        initializeSlider();
+      });
+    
+      $(document).ready(function () {
+        updateWindowWidth();
+        initializeSlider();
+      });
+    </script>
+    
+  </body>
+</html>

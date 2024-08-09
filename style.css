@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.glass-card {
+    box-sizing: border-box;
+    width: 98%;
+    height: 100%;
+    background: white;
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.2));
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    font-weight: bolder;
+    z-index: 1;
+}
+
+.glass-card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.glass-card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+    background-color: green !important;
+    color: white;
+}
+
+.glass-card i {
+    font-size: 40px;
+    color: rgb(82, 82, 82);
+}
+
+.glass-card p {
+    font-size: 19px;
+}
+
+/*  */
+.glass-card.active {
+    background-color: green !important;
+    color: white;
+}
+
+.glass-card.active i,
+.glass-card.active p {
+    color: white;
+}
+
+.divs-slider .glass-card {
+    box-sizing: border-box;
+    width: 98%;
+    height: 100%;
+    background: white;
+
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border: 1px solid #059212;
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    font-weight: bolder;
+    z-index: 1;
+}
+
+
+
+.banner-inner {
+    min-height: 22rem;
+    width: 100%;
+    display: flex;
+}
+
+.banner-inner>div:first-of-type {
+    background-image: url("./141643_original_3955x5932.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-inner>div:last-of-type {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+    background-color: #059212;
+}
+
+.banner-inner>div:last-of-type>p {
+    font-size: 44px;
+    position: relative;
+    color: white;
+}
+
+.banner-inner>div {
+    width: 50%;
+}
+
+.auth {
+    background-color: #059212 !important;
+}
+
+/* slider  */
+.slider-main-container {
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    background-color: rgb(243, 243, 243);
+}
+
+.divs-slider {
+    width: 96% !important;
+}
+
+.divs-slider .slick-list {
+    height: 9rem;
+    padding: 10px 0;
+}
+
+.divs-slider {
+    margin: 1rem;
+}
+
+.divs-slider>div:hover {
+    cursor: pointer;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    color: black !important;
+    font-size: 36px !important;
+}
+
+.slick-next {
+    right: -18px !important;
+}
+
+.divs-slider .slick-slide {
+    margin: 0 10px !important;
+}
+
+.divs-slider .glass-card {
+    height: 8rem;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+}
+
+
+.slick-prev,
+.slick-next {
+    top: 43% !important;
+}
+
+.slick-prev {
+    left: -33px !important;
+}
+
+@media (min-width: 2000px) {
+    .glass-card i {
+        font-size: 5rem;
+        color: rgb(82, 82, 82);
+    }
+
+    .glass-card p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 925px) {
+    .slick-next {
+        right: -15px !important;
+    }
+}
+
+@media (max-width: 796px) {
+    .slick-next {
+        right: -11px !important;
+    }
+    
+    .slick-prev {
+        left: -32px !important;
+    }
+}
+@media (max-width: 700px) {
+    .divs-slider .slick-slide {
+        margin: 0 8px !important;
+    }
+    .slider-main-container {
+        padding: 0rem;
+    }
+    .main-body{
+        background-color: rgb(243, 243, 243);
+    }
+    .slick-prev, .slick-next {
+        top: 96% !important;
+    }
+    .slick-next {
+        right: 4% !important;
+    }
+    .slick-prev {
+        left: 84% !important;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .banner-inner>div:last-of-type>p {
+        font-size: 2rem !important;
+    }
+    .slick-next {
+        right: 5% !important;
+    }
+    .slick-prev {
+        left: 80% !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner-inner>div:last-of-type>p {
+        font-size: 1.5rem !important;
+    }
+    .slick-next {
+        right: 6% !important;
+    }
+    .slick-prev {
+        left: 76% !important;
+    }
+}
