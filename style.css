@@ -230,10 +230,10 @@
         font-size: 2rem !important;
     }
     .slick-next {
-        right: 5% !important;
+        right: 10% !important;
     }
     .slick-prev {
-        left: 80% !important;
+        left: 70% !important;
     }
 }
 
@@ -242,9 +242,9 @@
         font-size: 1.5rem !important;
     }
     .slick-next {
-        right: 6% !important;
+        right: 12% !important;
     }
     .slick-prev {
-        left: 76% !important;
+        left: 68% !important;
     }
-}
+} 
