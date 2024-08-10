@@ -46,7 +46,7 @@
       </div>
       <center class="slider-main-container">
         <div class="divs-slider">
-          <div class="glass-card active">
+          <div class="glass-card">
             <img src="./icons/Accounts & Finance.png" alt="" />
             <p>Accounts & Finance</p>
           </div>
@@ -145,7 +145,7 @@
         </div>
       </center>
     </div>
-    <br>
+    <br />
     <footer>Copyright 2024, All Rights Reserved</footer>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -155,14 +155,92 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script>
+      // background colors
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(1)"
+        ).style.backgroundColor = "#02b890";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(2)"
+        ).style.backgroundColor = "#30c7a4";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(3)"
+        ).style.backgroundColor = "#66d4ba";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(4)"
+        ).style.backgroundColor = "#18abed";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(5)"
+        ).style.backgroundColor = "#45bbf0";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(6)"
+        ).style.backgroundColor = "#75cdf3";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(7)"
+        ).style.backgroundColor = "#5114b7";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(8)"
+        ).style.backgroundColor = "#7344c8";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(9)"
+        ).style.backgroundColor = "#9672d4";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(10)"
+        ).style.backgroundColor = "#152642";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(11)"
+        ).style.backgroundColor = "#263650";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(12)"
+        ).style.backgroundColor = "#425168";
+
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(13)"
+        ).style.backgroundColor = "#02b890";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(14)"
+        ).style.backgroundColor = "#30c7a4";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(15)"
+        ).style.backgroundColor = "#66d4ba";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(16)"
+        ).style.backgroundColor = "#18abed";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(17)"
+        ).style.backgroundColor = "#45bbf0";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(18)"
+        ).style.backgroundColor = "#75cdf3";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(19)"
+        ).style.backgroundColor = "#5114b7";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(20)"
+        ).style.backgroundColor = "#7344c8";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(21)"
+        ).style.backgroundColor = "#9672d4";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(22)"
+        ).style.backgroundColor = "#152642";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(23)"
+        ).style.backgroundColor = "#263650";
+        document.querySelector(
+          ".divs-slider .glass-card:nth-of-type(24)"
+        ).style.backgroundColor = "#425168";
+      });
+      // background color End
+
       document.querySelectorAll(".glass-card").forEach((card) => {
         card.addEventListener("click", function () {
           this.classList.toggle("active");
         });
       });
-    
+
       var numOfItem;
-    
+
       function updateWindowWidth() {
         const width = window.innerWidth;
         if (width <= 450) {
@@ -175,7 +253,7 @@
           numOfItem = 5;
         }
       }
-    
+
       function initializeSlider() {
         $(".divs-slider").slick({
           infinite: true,
@@ -188,23 +266,22 @@
           nextArrow: '<button type="button" class="slick-next">Next</button>',
         });
       }
-    
+
       window.addEventListener("resize", function () {
         updateWindowWidth();
         $(".divs-slider").slick("unslick");
         initializeSlider();
       });
-    
+
       document.addEventListener("DOMContentLoaded", (event) => {
         updateWindowWidth();
         initializeSlider();
       });
-    
+
       $(document).ready(function () {
         updateWindowWidth();
         initializeSlider();
       });
     </script>
-    
   </body>
 </html>
