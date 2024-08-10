@@ -3,6 +3,32 @@
     padding: 0;
 }
 
+.user-bar {
+    background-color: #5d5d5d;
+    padding: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.person-div {
+    border: 1px solid white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.person-div:hover {
+    cursor: pointer;
+}
+
+.person-div i {
+    font-size: 20px;
+}
+
 .glass-card {
     box-sizing: border-box;
     width: 98%;
@@ -53,6 +79,15 @@
 .glass-card.active {
     background-color: green !important;
     color: white;
+}
+
+.glass-card img {
+    height: 40px;
+    width: 40px;
+}
+
+.glass-card.active img {
+    filter: invert(100%) brightness(200%);
 }
 
 .glass-card.active i,
@@ -176,6 +211,17 @@
     left: -33px !important;
 }
 
+
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    background-color: #5d5d5d;
+    width: 100%;
+    color: white;
+    padding: 5px 1rem;
+}
+
 @media (min-width: 2000px) {
     .glass-card i {
         font-size: 5rem;
@@ -197,41 +243,48 @@
     .slick-next {
         right: -11px !important;
     }
-    
+
     .slick-prev {
         left: -32px !important;
     }
 }
+
 @media (max-width: 700px) {
     .divs-slider .slick-slide {
         margin: 0 8px !important;
     }
+
     .slider-main-container {
         padding: 0rem;
     }
-    .main-body{
+
+    .main-body {
         background-color: rgb(243, 243, 243);
     }
-    .slick-prev, .slick-next {
+
+    .slick-prev,
+    .slick-next {
         top: 96% !important;
     }
+
     .slick-next {
         right: 4% !important;
     }
+
     .slick-prev {
         left: 84% !important;
     }
 }
 
-
-
 @media (max-width: 500px) {
     .banner-inner>div:last-of-type>p {
         font-size: 2rem !important;
     }
+
     .slick-next {
         right: 10% !important;
     }
+
     .slick-prev {
         left: 70% !important;
     }
@@ -241,10 +294,12 @@
     .banner-inner>div:last-of-type>p {
         font-size: 1.5rem !important;
     }
+
     .slick-next {
         right: 12% !important;
     }
+
     .slick-prev {
         left: 68% !important;
     }
-} 
+}
