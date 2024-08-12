@@ -271,8 +271,18 @@
           numOfItem = 9;
         } else if (width <= 950 && width >= 800) {
           numOfItem = 7;
-        } else if (width <= 800) {
+        } else if (width <= 800 && width >= 700) {
           numOfItem = 6;
+        } else if (width <= 700 && width >= 600) {
+          numOfItem = 5;
+        } else if (width <= 600 && width >= 500) {
+          numOfItem = 4;
+        } else if (width <= 500 && width >= 400) {
+          numOfItem = 3;
+        } else if (width <= 400 && width >= 300) {
+          numOfItem = 2;
+        } else if (width <= 300) {
+          numOfItem = 1;
         } else {
           numOfItem = 12;
         }

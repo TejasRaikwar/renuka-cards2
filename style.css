@@ -236,6 +236,10 @@ footer {
   .slick-next {
     right: -15px !important;
   }
+
+  .divs-slider {
+    margin: 1rem 0;
+  }
 }
 
 @media (max-width: 796px) {
@@ -319,5 +323,15 @@ footer {
 
   .slick-prev {
     left: 68% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .slick-next {
+    right: 12% !important;
+  }
+
+  .slick-prev {
+    left: 62% !important;
   }
 }
