@@ -34,11 +34,9 @@
   box-sizing: border-box;
   width: 98%;
   height: 100%;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.2)
-  );
+  background: linear-gradient(to right bottom,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
   border: 1px solid white;
@@ -178,7 +176,7 @@
   margin: 1rem;
 }
 
-.divs-slider > div:hover {
+.divs-slider>div:hover {
   cursor: pointer;
 }
 
@@ -248,15 +246,38 @@ footer {
   .slick-prev {
     left: -32px !important;
   }
+
   .binn-flex {
     flex-wrap: wrap;
     row-gap: 1rem;
     margin-bottom: 10px;
   }
+
   .binn-flex div {
-    flex: 1 1 40%; 
+    flex: 1 1 40%;
   }
 
+}
+
+@media (max-width: 756px) {
+
+  .slick-prev::before,
+  .slick-next::before {
+    font-size: 42px !important;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 98% !important;
+  }
+
+  .slick-next {
+    right: 4% !important;
+  }
+
+  .slick-prev {
+    left: 84% !important;
+  }
 }
 
 @media (max-width: 700px) {
@@ -271,23 +292,10 @@ footer {
   .main-body {
     background-color: rgb(243, 243, 243);
   }
-
-  .slick-prev,
-  .slick-next {
-    top: 96% !important;
-  }
-
-  .slick-next {
-    right: 4% !important;
-  }
-
-  .slick-prev {
-    left: 84% !important;
-  }
 }
 
 @media (max-width: 500px) {
-  .banner-inner > div:last-of-type > p {
+  .banner-inner>div:last-of-type>p {
     font-size: 2rem !important;
   }
 
@@ -301,7 +309,7 @@ footer {
 }
 
 @media (max-width: 400px) {
-  .banner-inner > div:last-of-type > p {
+  .banner-inner>div:last-of-type>p {
     font-size: 1.5rem !important;
   }
 
