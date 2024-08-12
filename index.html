@@ -40,8 +40,28 @@
       </div>
       <div class="banner-main">
         <div class="banner-inner">
-          <div></div>
-          <div><p>Document Management System</p></div>
+          <div class="binn-flex">
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+              veniam?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Sunt, veniam?
+            </div>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+              veniam?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Sunt, veniam?
+            </div>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+              veniam?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Sunt, veniam?
+            </div>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+              veniam?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Sunt, veniam?
+            </div>
+          </div>
         </div>
       </div>
       <center class="slider-main-container">
@@ -243,14 +263,21 @@
 
       function updateWindowWidth() {
         const width = window.innerWidth;
-        if (width <= 450) {
-          numOfItem = 2;
-        } else if (width < 545) {
-          numOfItem = 3;
-        } else if (width < 800) {
-          numOfItem = 4;
-        } else {
-          numOfItem = 5;
+        if (width <= 1200 && width >= 1100) {
+          numOfItem = 11;
+        } else if (width <= 1100 && width >= 1000) {
+          numOfItem = 10;
+        } else if (width <= 1000 && width >= 950) {
+          numOfItem = 9;
+        } 
+        else if (width <= 950  && width >= 800) {
+          numOfItem = 7;
+        } 
+        else if (width <= 800) {
+          numOfItem = 6;
+        } 
+        else {
+          numOfItem = 12;
         }
       }
 

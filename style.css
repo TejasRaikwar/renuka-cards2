@@ -74,7 +74,11 @@
 }
 
 .glass-card p {
-  font-size: 19px;
+  font-size: 15px;
+  padding: 5px;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: white;
 }
 
 /*  */
@@ -86,6 +90,7 @@
 .glass-card img {
   height: 40px;
   width: 40px;
+  filter: invert(100%) brightness(200%);
 }
 
 .glass-card.active img {
@@ -101,7 +106,7 @@
   box-sizing: border-box;
   width: 98%;
   height: 100%;
-  border: 1px solid #059212;
+  /* border: 1px solid #059212; */
   border-radius: 17px;
   text-align: center;
   cursor: pointer;
@@ -117,38 +122,40 @@
 }
 
 .banner-inner {
-  min-height: 22rem;
+  min-height: 26rem;
   width: 100%;
-  display: flex;
-}
-
-.banner-inner > div:first-of-type {
   background-image: url("./141643_original_3955x5932.jpg");
   background-position: center;
   background-size: cover;
-}
-
-.banner-inner > div:last-of-type {
   display: flex;
   flex-direction: column-reverse;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-  box-sizing: border-box;
-  background-color: #106d38;
 }
 
-.banner-inner > div:last-of-type > p {
-  font-size: 44px;
-  position: relative;
+.binn-flex {
+  width: 100%;
+  min-height: 4.3rem;
   color: white;
+  font-size: 1.2em;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.banner-inner > div {
-  width: 50%;
-}
-
-.auth {
-  background-color: #059212 !important;
+.binn-flex div {
+  flex: 1 1 22%;
+  min-width: 150px;
+  height: 2.8rem;
+  border-left: 4px solid green;
+  padding-left: 10px;
+  padding-top: 5px;
+  overflow: hidden;
+  text-wrap: wrap;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  white-space: normal;
+  text-overflow: ellipsis;
 }
 
 /* slider  */
@@ -182,11 +189,11 @@
 }
 
 .slick-next {
-  right: -18px !important;
+  right: -23px !important;
 }
 
 .divs-slider .slick-slide {
-  margin: 0 10px !important;
+  margin: 0 5px !important;
 }
 
 .divs-slider .glass-card {
@@ -241,6 +248,15 @@ footer {
   .slick-prev {
     left: -32px !important;
   }
+  .binn-flex {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    margin-bottom: 10px;
+  }
+  .binn-flex div {
+    flex: 1 1 40%; 
+  }
+
 }
 
 @media (max-width: 700px) {
