@@ -72,8 +72,8 @@
 }
 
 .glass-card p {
-  font-size: 15px;
-  padding: 5px;
+  font-size: 14px;
+  padding: 3px 5px;
   word-wrap: break-word;
   word-break: break-all;
   color: white;
@@ -86,8 +86,8 @@
 }
 
 .glass-card img {
-  height: 40px;
-  width: 40px;
+  height: 36px;
+  width: 36px;
   filter: invert(100%) brightness(200%);
 }
 
@@ -195,7 +195,7 @@
 }
 
 .divs-slider .glass-card {
-  height: 8rem;
+  height: 7rem;
   display: flex !important;
   align-items: center;
   justify-content: center;
