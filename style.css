@@ -144,6 +144,7 @@
   font-size: 1.2em;
   display: flex;
   flex-wrap: wrap;
+  display: none;
 }
 
 .binn-flex div {
@@ -240,11 +241,6 @@ footer {
   
   .glass-card p {
     font-size: 2rem;
-  }
-}
-@media (min-width: 1201px) {
-  .banner-inner {
-    min-height: 45vh;
   }
 }
 
